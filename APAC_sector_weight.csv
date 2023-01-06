@@ -1,0 +1,56 @@
+Sector,Weight(%),Country,Sector_Name
+realestate,0.0,Taiwan,Real Estate
+consumer_cyclical,4.8499998,Taiwan,Consumer Cyclical
+basic_materials,7.2700000000000005,Taiwan,Basic Materials
+consumer_defensive,2.17,Taiwan,Consumer Defensive
+technology,56.54,Taiwan,Technology
+communication_services,3.2199999999999998,Taiwan,Communication Services
+financial_services,19.469998999999998,Taiwan,Financial Services
+utilities,0.0,Taiwan,Utilities
+industrials,5.41,Taiwan,Industrials
+energy,0.58999998,Taiwan,Energy
+healthcare,0.06999999999999999,Taiwan,Healthcare
+realestate,3.5000000000000004,Japan,Real Estate
+consumer_cyclical,15.160000000000002,Japan,Consumer Cyclical
+basic_materials,4.4099998000000005,Japan,Basic Materials
+consumer_defensive,6.2700000000000005,Japan,Consumer Defensive
+technology,16.610001,Japan,Technology
+communication_services,8.04,Japan,Communication Services
+financial_services,10.66,Japan,Financial Services
+utilities,1.0199999,Japan,Utilities
+industrials,22.45,Japan,Industrials
+energy,0.84,Japan,Energy
+healthcare,10.0200005,Japan,Healthcare
+realestate,0.0,Korea,Real Estate
+consumer_cyclical,8.180001,Korea,Consumer Cyclical
+basic_materials,10.229999600000001,Korea,Basic Materials
+consumer_defensive,4.099999700000001,Korea,Consumer Defensive
+technology,37.12,Korea,Technology
+communication_services,7.2700000000000005,Korea,Communication Services
+financial_services,11.07,Korea,Financial Services
+utilities,0.61000003,Korea,Utilities
+industrials,11.17,Korea,Industrials
+energy,2.1399999999999997,Korea,Energy
+healthcare,5.6599997,Korea,Healthcare
+realestate,19.99,Singapore,Real Estate
+consumer_cyclical,11.25,Singapore,Consumer Cyclical
+basic_materials,0.0,Singapore,Basic Materials
+consumer_defensive,4.0700004,Singapore,Consumer Defensive
+technology,5.9799999999999995,Singapore,Technology
+communication_services,4.52,Singapore,Communication Services
+financial_services,41.47,Singapore,Financial Services
+utilities,0.0,Singapore,Utilities
+industrials,12.1199995,Singapore,Industrials
+energy,0.0,Singapore,Energy
+healthcare,0.0,Singapore,Healthcare
+realestate,21.93,Hong Kong,Real Estate
+consumer_cyclical,5.4899998,Hong Kong,Consumer Cyclical
+basic_materials,0.9599999499999999,Hong Kong,Basic Materials
+consumer_defensive,2.8499998,Hong Kong,Consumer Defensive
+technology,0.0,Hong Kong,Technology
+communication_services,1.4199998999999999,Hong Kong,Communication Services
+financial_services,42.480000000000004,Hong Kong,Financial Services
+utilities,9.7200006,Hong Kong,Utilities
+industrials,14.430000000000001,Hong Kong,Industrials
+energy,0.0,Hong Kong,Energy
+healthcare,0.0,Hong Kong,Healthcare
