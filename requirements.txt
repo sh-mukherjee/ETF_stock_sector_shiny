@@ -1,3 +1,4 @@
+yahooquery
 streamlit
 pandas
 plotly.express
