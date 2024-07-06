@@ -1,5 +1,5 @@
 yahooquery
-streamlit
 pandas
 plotly.express
 shiny
+shinywidgets
