@@ -28,7 +28,7 @@ def plot1():
                 "South Korea": "blue",
                 "Hong Kong": "#FBE426",
                 "Singapore": "magenta",
-             "Australia": "goldenrod",
+             "Australia": "brown",
              "Malaysia": "green",
              "Thailand": "darkblue"},
              template="ggplot2",   
