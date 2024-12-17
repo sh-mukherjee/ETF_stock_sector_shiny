@@ -1,5 +1,5 @@
 import plotly.express as px
-from shiny.express import input, ui
+from shiny.express import input, ui, render, output
 from shiny import reactive
 from shinywidgets import render_plotly
 
@@ -16,8 +16,9 @@ def filter_data():
     mask = sector_df.Country.isin(input.Country())
     return sector_df[mask]
 
+@output
 @render_plotly
-def plot1():
+def sector_plot():
     return px.bar(filter_data(), 
                   x="Weight(%)", 
                   y="Sector_Name", 
