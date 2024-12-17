@@ -19,7 +19,8 @@ def filter_data():
 @output
 @render_plotly
 def sector_plot():
-    return px.bar(filter_data(), 
+    data = filter_data()
+    return px.bar(data, 
                   x="Weight(%)", 
                   y="Sector_Name", 
                   color="Country", hover_data=['Country','Sector_Name','Weight(%)'],
