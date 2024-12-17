@@ -22,7 +22,7 @@ app_ui = ui.page_fluid(
 
 # Server logic
 def server(input, output, session):
-    @reactive.Calc
+    @reactive.calc
     def filter_data():
         mask = sector_df.Country.isin(input.Country())
         return sector_df[mask]
