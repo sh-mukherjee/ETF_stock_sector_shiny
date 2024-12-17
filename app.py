@@ -16,7 +16,7 @@ def filter_data():
     mask = sector_df.Country.isin(input.Country())
     return sector_df[mask]
 
-@output
+@render.ui
 @render_plotly
 def sector_plot():
     data = filter_data()
