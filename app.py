@@ -8,7 +8,7 @@ ui.h1("MSCI ETF Sector Weights")
 ui.p("Source: Yahoo! Finance")
 
 with ui.sidebar():
-    ui.input_selectize('Country', 'Select Country', countries, multiple=True)
+    ui.input_selectize('Country', 'Select Country', choices=countries, selected='Singapore', multiple=True)
     
 
 @reactive.calc
