@@ -11,16 +11,16 @@ with ui.sidebar():
     ui.input_selectize('Country', 'Select Country', choices=countries, selected='Singapore', multiple=True)
     
 
-#@reactive.calc
-#def filter_data():
-   # mask = sector_df.Country.isin(input.Country())
-   # return sector_df[mask]
+@reactive.calc
+def filter_data():
+    filt_df = sector_df.copy()
+    filt_df = filt_df.loc[sector_df.Country.isin(input.Country())]
+    return filt_df
 
 #@render.ui
 @render_plotly
 def sector_plot():
-    data = sector_df[sector_df.Country.isin(input.Country())]
-    return px.bar(data, 
+    return px.bar(filter_data(), 
                   x="Weight(%)", 
                   y="Sector_Name", 
                   color="Country", hover_data=['Country','Sector_Name','Weight(%)'],
