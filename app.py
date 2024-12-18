@@ -5,20 +5,26 @@ from shinywidgets import render_plotly
 
 from ETF_sector_data_prep import sector_df, countries
 
-ui.h1("MSCI ETF Sector Weights")
-ui.p("Source: Yahoo! Finance")
+# Add page title and sidebar
+ui.page_opts(title="MSCI ETF Sector Weights", fillable=True)
+
+#ui.h1("MSCI ETF Sector Weights")
+#ui.p("Source: Yahoo! Finance")
 
 with ui.sidebar():
     ui.input_selectize('Country', 'Select Country', choices=countries, selected='Singapore', multiple=True)
     
-
-@render_plotly
-def sector_plot():
-    return px.bar(filter_data(), 
+with ui.layout_columns(fill=False):
+    with ui.card(full_screen=True):
+        ui.card_header("Source: Yahoo! Finance")
+    
+       @render_plotly
+       def sector_plot():
+           return px.bar(filter_data(), 
                   x="Weight(%)", 
                   y="Sector_Name", 
                   color="Country", hover_data=['Country','Sector_Name','Weight(%)'],
-             color_discrete_map={
+                  color_discrete_map={
                 "Japan": "red",
                 "Taiwan": "#00CC96",
                 "South Korea": "blue",
@@ -31,6 +37,7 @@ def sector_plot():
              barmode = 'group',
              height = 800)
 
+# Reactive calculations
 @reactive.calc
 def filter_data():
     filt_df = sector_df.copy()
