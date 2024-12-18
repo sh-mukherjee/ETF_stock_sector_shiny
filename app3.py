@@ -3,7 +3,7 @@ from shiny.express import input, ui, render, output
 from shiny import reactive
 from shinywidgets import render_plotly
 
-from ETF_sector_data_prep import sector_df, countries
+from ETF_sector_data_prep import countries
 ui.h1("MSCI ETF Sector Weights")
 ui.p("Source: Yahoo! Finance")
 
@@ -18,8 +18,10 @@ with ui.sidebar():
     #return filt_df
 
 #@render.ui
-@render.plot
+@render_plotly
 def sector_plot():
+    import plotly.express as px
+    from ETF_sector_data_prep import sector_df
     filt_df = sector_df.copy()
     filt_df = filt_df.loc[sector_df.Country.isin(input.Country())]
     return px.bar(filt_df, 
