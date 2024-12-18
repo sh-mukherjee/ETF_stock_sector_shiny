@@ -18,7 +18,7 @@ with ui.sidebar():
     #return filt_df
 
 #@render.ui
-@render_plotly
+@render.plot
 def sector_plot():
     filt_df = sector_df.copy()
     filt_df = filt_df.loc[sector_df.Country.isin(input.Country())]
