@@ -7,8 +7,8 @@ from ETF_sector_data_prep import countries
 ui.h1("MSCI ETF Sector Weights")
 ui.p("Source: Yahoo! Finance")
 
-with ui.sidebar():
-    ui.input_selectize('Country', 'Select Country', choices=countries, selected='Singapore', multiple=True)
+#with ui.sidebar():
+    #ui.input_selectize('Country', 'Select Country', choices=countries, selected='Singapore', multiple=True)
     
 
 #@reactive.calc
@@ -23,7 +23,7 @@ def sector_plot():
     import plotly.express as px
     from ETF_sector_data_prep import sector_df
     filt_df = sector_df.copy()
-    filt_df = filt_df.loc[sector_df.Country.isin(input.Country())]
+    #filt_df = filt_df.loc[sector_df.Country.isin(input.Country())]
     return px.bar(filt_df, 
                   x="Weight(%)", 
                   y="Sector_Name", 
