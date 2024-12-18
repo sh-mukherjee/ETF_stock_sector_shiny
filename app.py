@@ -18,9 +18,9 @@ with ui.layout_columns(fill=False):
     with ui.card(full_screen=True):
         ui.card_header("Source: Yahoo! Finance")
     
-       @render_plotly
-       def sector_plot():
-           return px.bar(filter_data(), 
+        @render_plotly
+        def sector_plot():
+            return px.bar(filter_data(), 
                   x="Weight(%)", 
                   y="Sector_Name", 
                   color="Country", hover_data=['Country','Sector_Name','Weight(%)'],
